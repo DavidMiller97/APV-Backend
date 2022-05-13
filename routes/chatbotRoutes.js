@@ -6,7 +6,7 @@ import axios from 'axios';
 import dotenv from 'dotenv';
 //Para que puede interpretar las variabls de entorno
 dotenv.config();
-import dialogflow from '../dialogflow';
+import dialogflow from '../dialogflow.js';
 import { structProtoToJson } from '../helpers/structFunctions.js';
 
 // Messenger API parameters
