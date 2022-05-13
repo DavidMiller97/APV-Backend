@@ -1,6 +1,5 @@
-import dialogflow from  'dialogflow'; 
+import dialogflow from 'dialogflow'; 
 import dotenv from 'dotenv';
-
 //Para que puede interpretar las variabls de entorno
 dotenv.config();
 
