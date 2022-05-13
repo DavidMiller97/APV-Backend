@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 import request from 'request';
-import {v1 as uuid} from 'uuid';
+import uuid from 'uuid';
 import axios from 'axios';
 import dotenv from 'dotenv';
 //Para que puede interpretar las variabls de entorno
