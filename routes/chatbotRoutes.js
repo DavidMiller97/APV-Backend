@@ -84,7 +84,7 @@ async function receivedMessage(event) {
   var recipientID = event.recipient.id;
   var timeOfMessage = event.timestamp;
   var message = event.message;
-  
+
   console.log(
     "Received message for user %d and page %d at %d with message:",
     senderId,
@@ -109,7 +109,7 @@ async function receivedMessage(event) {
     handleQuickReply(senderId, quickReply, messageId);
     return;
   }
-  saveUserData(senderId);
+  //saveUserData(senderId);
 
   if (messageText) {
     //send message to dialogflow
@@ -119,7 +119,7 @@ async function receivedMessage(event) {
     handleMessageAttachments(messageAttachments, senderId);
   }
 }
-
+/*
 async function saveUserData(facebookId) {
   let isRegistered = await findOne({ facebookId });
   if (isRegistered) return;
@@ -134,7 +134,7 @@ async function saveUserData(facebookId) {
     if (err) return console.log(err);
     console.log("Se creo un usuario:", res);
   });
-}
+}*/
 
 function handleMessageAttachments(messageAttachments, senderId) {
   //for now just reply
