@@ -1,7 +1,7 @@
 import express from 'express';
 const router = express.Router();
 import request from 'request';
-import uuid from 'uuid';
+import {v1} from 'uuid';
 import axios from 'axios';
 import dotenv from 'dotenv';
 //Para que puede interpretar las variabls de entorno
@@ -144,7 +144,7 @@ function handleMessageAttachments(messageAttachments, senderId) {
 async function setSessionAndUser(senderId) {
   try {
     if (!sessionIds.has(senderId)) {
-      sessionIds.set(senderId, uuid.v1());
+      sessionIds.set(senderId, v1);
     }
   } catch (error) {
     throw error;
