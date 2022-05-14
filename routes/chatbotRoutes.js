@@ -304,6 +304,8 @@ async function sendToDialogFlow(senderId, messageText) {
       session,
       "FACEBOOK"
     );
+    console.log(session);
+    console.log(messageText);
     console.log(result);
     handleDialogFlowResponse(senderId, result);
   } catch (error) {
