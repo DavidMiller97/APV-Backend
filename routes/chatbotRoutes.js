@@ -304,6 +304,7 @@ async function sendToDialogFlow(senderId, messageText) {
       session,
       "FACEBOOK"
     );
+    console.log(result);
     handleDialogFlowResponse(senderId, result);
   } catch (error) {
     console.log("salio mal en sendToDialogflow...", error);
