@@ -1,9 +1,9 @@
 import express from 'express';
 const router = express.Router();
 import request from 'request';
-import {v1} from 'uuid';
 import axios from 'axios';
 import dotenv from 'dotenv';
+import {v1 as uuidv1} from 'uuid';
 //Para que puede interpretar las variabls de entorno
 dotenv.config();
 import {sendToDialogFlow as sendToDialogFlow2} from '../dialogflow.js';
@@ -144,8 +144,8 @@ function handleMessageAttachments(messageAttachments, senderId) {
 async function setSessionAndUser(senderId) {
   try {
     if (!sessionIds.has(senderId)) {
-      let time = v1();
-      sessionIds.set(senderId, time);
+      
+      sessionIds.set(senderId, uuidv1());
     }
   } catch (error) {
     throw error;
