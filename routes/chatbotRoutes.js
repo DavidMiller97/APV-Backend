@@ -144,7 +144,8 @@ function handleMessageAttachments(messageAttachments, senderId) {
 async function setSessionAndUser(senderId) {
   try {
     if (!sessionIds.has(senderId)) {
-      sessionIds.set(senderId, v1);
+      let time = v1();
+      sessionIds.set(senderId, time);
     }
   } catch (error) {
     throw error;
